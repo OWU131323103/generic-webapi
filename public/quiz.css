@@ -14,7 +14,7 @@
     text-align: center;
     font-size: 18px;
     font-weight: 600;
-    color: #667eea;
+    color: #ea66a4;
     margin-bottom: 20px;
 }
 
@@ -38,14 +38,21 @@
     padding: 15px 20px;
     margin-bottom: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease; /* 反応を良くするために少し早く */
     font-size: 16px;
 }
 
 .selection-item:hover {
     background: #edf2f7;
     border-color: #cbd5e0;
-    transform: translateY(-1px);
+}
+
+/* センサー選択中のハイライト */
+.selection-item.sensor-highlight {
+    background: #ebf8ff;
+    border-color: #66d6ea;
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
 }
 
 .selection-item:active {
@@ -57,6 +64,7 @@
     border-color: #48bb78;
     color: #22543d;
     cursor: default;
+    transform: none;
 }
 
 .selection-item.incorrect {
@@ -64,6 +72,7 @@
     border-color: #e53e3e;
     color: #742a2a;
     cursor: default;
+    transform: none;
 }
 
 .answer-feedback {
@@ -106,6 +115,31 @@
     color: #2d3748;
     margin-bottom: 25px;
     font-size: 24px;
+}
+
+/* センサー操作ボタン */
+.sensor-btn {
+    background: #4a5568;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.sensor-btn:hover {
+    background: #2d3748;
+}
+
+.sensor-instruction {
+    font-size: 14px;
+    color: #ea66a4;
+    font-weight: bold;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
 }
 
 @media (max-width: 768px) {
